@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53123A83-3236-48CB-AF01-3D5F3AC2275C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InsureItAll_AssignmentTwo</RootNamespace>
+    <AssemblyName>InsureItAll_AssignmentTwo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Claims.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="frm_AdditionalDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdditionalDrivers.Designer.cs">
+      <DependentUpon>frm_AdditionalDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdminPanel.Designer.cs">
+      <DependentUpon>frm_AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_OpeningScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OpeningScreen.Designer.cs">
+      <DependentUpon>frm_OpeningScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>frm_Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Vehicle.Designer.cs">
+      <DependentUpon>frm_Vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_WelcomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_WelcomeScreen.Designer.cs">
+      <DependentUpon>frm_WelcomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Policy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_AdditionalDrivers.resx">
+      <DependentUpon>frm_AdditionalDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdminPanel.resx">
+      <DependentUpon>frm_AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OpeningScreen.resx">
+      <DependentUpon>frm_OpeningScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Personal.resx">
+      <DependentUpon>frm_Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Vehicle.resx">
+      <DependentUpon>frm_Vehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_welcomeScreen.resx">
+      <DependentUpon>frm_WelcomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\locker_53876-25496.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\74472.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\open+password+icon-1320183290851596683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\425221_preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.-by-Tuomo-Korhonen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\425221_preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\160_F_134910797_hYnXCep8tDFTnFxmTanhuVTwl9pjJy8q.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
